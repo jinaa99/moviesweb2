@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { Movie } from "./MovieSection";
 import FilteredMoviesSkeleton from "./FilteredMoviesSkeleton";
 import { useQueryState } from "nuqs";
+import { Star } from "lucide-react";
 
 export const FilteredMovies = () => {
   const [filtermovies, setFiltermovies] = useState<Movie[]>([]);
@@ -80,7 +81,7 @@ export const FilteredMovies = () => {
                     }
                   ></img>
                   <div className="flex gap-2 py-2 px-2 items-center">
-                    <img src="/star.png" className="h-4 w-4" />
+                    <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     <p className="">
                       {Math.round(filtermovie.vote_average * 10) / 10}/10
                     </p>

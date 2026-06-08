@@ -5,6 +5,7 @@ import ReactPlayer from "react-player";
 import { Genres } from "./Genres";
 import { TrailerVideo } from "./TrailerVideo";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Star } from "lucide-react";
 
 type MovieDetail = {
   release_date: string;
@@ -136,7 +137,7 @@ export const MovieDetailB = ({ movieId }: { movieId: string }) => {
           <div className="text-xs font-medium pl-3">Rating</div>
           <div className=" py-2 px-2">
             <div className=" gap-1 text-center items-center flex">
-              <img alt="icon" src="/Star.png" className="h-7 w-6" />
+              <Star className="h-7 w-6 fill-yellow-400 text-yellow-400" />
               <div className=" font-semibold">
                 {Math.round((movie?.vote_average ?? 0) * 10) / 10}/10
               </div>{" "}

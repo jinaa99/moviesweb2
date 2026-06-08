@@ -16,7 +16,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Play } from "lucide-react";
+import { Star } from "lucide-react";
 import { useEffect, useState } from "react";
 import { WatchTrailerButton } from "./WatchTrailerButton";
 
@@ -86,7 +86,7 @@ export const Carouselx = () => {
                     {el.title}
                   </h1>
                   <div className="flex gap-1 text-center items-center pb-4">
-                    <img alt="" src="/Star.png" className="h-7 w-7" />
+                    <Star className="h-7 w-7 fill-yellow-400 text-yellow-400" />
                     <div className="text-white">
                       {Math.round(el.vote_average * 10) / 10} / 10
                     </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Star } from "lucide-react";
 
 type CardboxProps = {
   image: string;
@@ -23,7 +24,7 @@ export const Cardbox = (props: CardboxProps) => {
         />
         <div className="py-2 px-2">
           <div className="flex gap-1 text-center items-center">
-            <img alt="icon" src="/Star.png" className="h-4 w-4" />
+            <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
             <div className="">{Math.round(props.score * 10) / 10}/10</div>
           </div>
           <div className="">{props.mname}</div>

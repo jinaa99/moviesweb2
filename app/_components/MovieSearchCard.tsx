@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 type MovieSearchCardProps = {
   image: string;
   score: number;
@@ -20,11 +20,14 @@ export const MovieSearchCard = (props: MovieSearchCardProps) => {
           alt="photo"
           src={props.image}
           className="h-[244px] w-[165px] rounded-lg"
+          onError={(e) => {
+            e.currentTarget.src = "/placeholder.png";
+          }}
         />
         <div className="py-2 px-2">
           <div className="text-xl font-semibold">{props.mname}</div>
           <div className="flex gap-1 text-center items-center">
-            <img alt="icon" src="/Star.png" className="h-4 w-4 rounded-lg" />
+            <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
             <div className="text-gray-500 text-sm">
               {Math.round(props.score * 10) / 10}/10
             </div>
